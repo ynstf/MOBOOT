@@ -1,0 +1,100 @@
+{% extends "layout.html" %}
+{% block title %}{{ title }}{% endblock %}
+{% block body %}
+<style>
+  .infos{
+    background: rgba(192, 144, 247, 0.3) ;
+    border-radius: 30px;
+    height: 500px;
+    width: 500px;
+    margin: auto;
+    align-items: center;
+
+  }
+
+  .infos .forum{
+      text-align: center;
+      align-items: center;
+  }
+
+  .infos .forum input{
+
+      border-radius: 18px;
+      padding: 10px 20px;
+      margin: 5px; 
+      transition: 0.4s;
+  }
+  .infos .forum input:hover{
+      padding: 10px 60px;
+  }
+
+  #log{
+      font-weight: 600;
+      font-size: large;
+      color: bisque;
+      background-color: #4017c6;
+      transition: 0.3s;
+  }
+  #log:hover{
+      
+      background-color: #bfaaf0;
+      color: #020202;
+  }
+
+  .infos .forum h1{
+      color: aliceblue;
+      font-weight: 700;
+      font-size: 50px;
+      text-align: center;
+      margin: 30px;
+  }
+
+  .infos .forum a{
+      text-decoration: none;
+      color: antiquewhite;
+      font-weight: 500;
+      font-size: 18px;
+      transition: 0.3s;
+
+  }
+  .infos .forum a:hover{
+      color: #24087e;
+  }
+  .hidde{display: none;}
+</style>
+
+<section class="infos">
+  <div class="forum">
+      <h1>Register</h1>
+
+      {% from '_renderForm.html' import render_field %}
+
+      {% with messages = get_flashed_messages() %}
+            {% if messages %}
+              <div class="alert alert-danger">
+                {{ messages[0] }}
+              </div>
+            {% endif %}
+          {% endwith %}
+          
+      <form  action="{{ url_for('auth.register')}}" method="post">
+        <div>
+          {{ form.csrf_token }}
+          {{ render_field(form.name,'Enter your name') }}
+          {{ render_field(form.last_name,'Enter your last name') }}
+          {{ render_field(form.email,'Enter your mail') }}
+          {{ render_field(form.password,'Enter your password') }}
+          {{ render_field(form.confirm,'Confirm your password') }}
+          <div>{{ form.submit(id="log",value="REGISTER") }}</div>
+        </div>
+          <!--
+          <input type="email" placeholder="Enter your mail"><br>
+          <input type="password" name="" id="" placeholder="Enter your password"><br>
+          <input type="submit" name="" id="log" value="LOGIN">-->
+      </form><br>
+      <a href="{{ url_for('auth.login')}}"> Do you have an account ? </a>
+  </div>
+</section>
+
+<div style="height: 40vh;"></div>
+{% endblock %}

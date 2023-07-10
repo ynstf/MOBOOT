@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ title }}</title>
+</head>
+<body>
+    <a href="{{ url_for('auth.logout')}}">logout</a>
+    <h1>hi admin!</h1>
+    <br>
+    <h1 style="color: brown;">Users</h1>
+    {% for x in dbs %}
+        <p>{{ x }}</p>
+    {% endfor %}
+
+    <br>
+    <h1 style="color: brown;">Messages</h1>
+
+
+    <form  action="{{ url_for('home.admin')}}" method="post">
+        <div>
+            <div> {{ form.reserch(placeholder='Enter id') }}</div>
+            <input type="submit" value="search">
+        </div>
+    </form>
+
+    
+
+    <div class="box"></div>
+    
+    <!--{% from '_renderForm.html' import show %}
+    {{ show(vari,msgs) }}-->
+    <div>
+        {% for msg in msgs %}
+            {% if msg["user_id"]==vari %}
+                <p style="color: rgb(47, 93, 0); ">user : {{ msg["msgs"]["msg"] }} </p>
+                <p style="color: rgb(136, 0, 27);">boot :  {{ msg["msgs"]["response"] }} </p>
+            {% endif %}
+        {% endfor %}
+    </div>
+
+<script>
+    
+</script>
+</body>
+</html>

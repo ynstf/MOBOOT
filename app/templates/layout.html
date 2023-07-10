@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}{% endblock %}</title>
+    <!-- Bootstrap, font-awesome, custom css files -->
+    <link rel="stylesheet" href="{{url_for('static', filename='css/main.css')}}">
+    <link rel="shortcut icon" type="x-icon" href="{{url_for('static', filename='images/moboot.png')}}">
+    
+</head>
+<body>
+    <style>
+    @media (max-width: 460px){
+        *{
+            width: fit-content;
+
+        }
+        .about h1{
+            text-align: center;
+            margin: 0px 30px;
+        }
+        nav ul li{
+            font-size: 23px;
+            display: inline-block;
+            padding: 0px 0px;
+            margin: 10px 0px;
+
+    }
+    
+    
+    }
+    </style>
+<header class="header">
+    <div class="logo"><a href='/'>MOBOOT</a></div>
+    <nav class="menu"><ul>
+        <li><a href='/'>Home</a></li>
+        {% if not current_user.is_authenticated %}
+        <li class="hidde"><a href="#about">About</a></li>
+        <li class="hidde"><a href="#contact">Contact</a></li>
+        <li><a href="{{ url_for('auth.login')}}">Login</a></li>
+        <li><a href="{{ url_for('auth.register')}}">Register</a></li>
+        {% else %}
+        <li class="userName"><a href="{{ url_for('home.welcome')}}"> {{ current_user.last_name }} </a></li>
+        <li><a href="{{ url_for('auth.logout')}}">Logout</a></li>  
+        {% endif %}
+    </ul></nav>
+</header>
+
+{% block body %}{% endblock %}
+
+</body>
+</html>

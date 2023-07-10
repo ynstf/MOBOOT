@@ -1,0 +1,109 @@
+{% extends "layout.html" %}
+{% block title %}{{ title }}{% endblock %}
+{% block body %}
+<style>
+  .infos{
+    background: rgba(192, 144, 247, 0.3) ;
+    border-radius: 30px;
+    height: 500px;
+    width: 500px;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+  }
+
+  .infos .forum{
+      text-align: center;
+      align-items: center;
+  }
+
+  .infos .forum input{
+
+      border-radius: 18px;
+      padding: 10px 20px;
+      margin: 5px; 
+      transition: 0.4s;
+  }
+  .infos .forum input:hover{
+      padding: 10px 40px;
+  }
+
+  #log{
+      font-weight: 600;
+      font-size: large;
+      color: bisque;
+      background-color: #4017c6;
+      transition: 0.3s;
+  }
+  #log:hover{
+      
+      background-color: #bfaaf0;
+      color: #020202;
+  }
+
+  .infos .forum h1{
+      color: aliceblue;
+      font-weight: 700;
+      font-size: 50px;
+      text-align: center;
+      margin: 20px;
+  }
+
+  .infos .forum a{
+      text-decoration: none;
+      color: antiquewhite;
+      font-weight: 500;
+      font-size: 18px;
+      transition: 0.3s;
+
+  }
+  .infos .forum a:hover{
+      color: #24087e;
+  }
+
+  .infos img{
+      z-index: -1;
+      width: 200px;
+      transition: 0.4s;
+  }
+  .infos img:hover{
+      width: 230px;
+  }
+  .hidde{display: none;}
+</style>
+<section class="infos">
+  <div>
+      <img src="{{url_for('static', filename='images/moboot.png')}}" alt="logo">
+  </div>
+  <div class="forum">
+      
+      <h1>welcome</h1>
+
+      {% with messages = get_flashed_messages() %}
+            {% if messages %}
+              <div class="alert alert-danger">
+                {{ messages[0] }}
+              </div>
+            {% endif %}
+          {% endwith %}
+          
+      <form  action="{{ url_for('auth.login')}}" method="post">
+        <div>
+          {{ form.csrf_token }}
+          <div> {{ form.email(placeholder='Enter your mail') }}</div>
+          <div> {{ form.password(placeholder='Enter your password') }}</div>
+          <div> {{ form.submit(id="log",value="LOGIN") }}</div>
+        </div>
+          <!--
+          <input type="email" placeholder="Enter your mail"><br>
+          <input type="password" name="" id="" placeholder="Enter your password"><br>
+          <input type="submit" name="" id="log" value="LOGIN">-->
+      </form><br>
+      <a href="{{ url_for('auth.register')}}">Click here to register </a>
+  </div>
+</section>
+
+<div style="height: 40vh;"></div>
+{% endblock %}

@@ -1,0 +1,20 @@
+{% macro render_field(field,placeholders) -%}
+  <div>
+    {{ field(placeholder= placeholders, **kwargs) }}
+    {% for error in field.errors %}
+      <div class="alert alert-danger">
+        {{ error }}
+      </div>
+    {% endfor %}
+  </div>
+{%- endmacro %}
+
+{% macro show(id,msgs) -%}
+  <div>
+    {% for msg in msgs %}
+        {% if msg["user_id"]==id %}
+            <p>{{ msg }}</p>
+        {% endif %}
+    {% endfor %}
+  </div>
+{%- endmacro %}

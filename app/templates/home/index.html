@@ -1,0 +1,126 @@
+{% extends "layout.html" %}
+{% block title %}{{ title }}{% endblock %}
+{% block body %}
+<style>
+    .content{
+        margin-top: 0px;
+        background: url("{{url_for('static', filename='images/background.gif')}}");
+        border-radius: 50px;
+        background-attachment: fixed;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-size: 100%,cover;
+        background-color: #0c0520;
+        background-position: center;
+        margin-bottom: 0%;
+        height: 700px;
+        width: 100%;   
+        text-align: center;
+        justify-content: center;
+        }
+    .about{
+        text-align: center;
+        margin: 70px 90px;
+        }
+    .about h1{
+        color: #fff;
+        margin: 30px;
+        font-weight: 600;
+        font-size:50px;
+        }
+    .about p{
+        color:rgb(236, 197, 247);
+        margin: 30px;
+        font-size:18px;
+        }
+
+    .contact{
+        
+        background: #333;
+        text-align: center;
+        padding: 30px 0px;
+        width: 100%;
+        grid-auto-rows: minmax(300px,auto);
+        
+        }
+    .contact0{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        align-content: start;
+        margin: 0 30px;
+        }
+    .contact h1{
+        color: #fff;
+        margin: 30px;
+        font-weight: 600;
+        font-size:50px;
+        }
+    .contact p{
+        color:rgb(235, 169, 134);
+        margin: 30px;
+        font-size:18px;
+
+        }
+    .content .icon1{
+        padding: 100px;
+        height: 500px;
+        align-items: center;
+        align-content: center;
+        }
+    .contact .contact0 .icon2{
+        height: 100px;
+
+        }
+    .contact1 {
+        align-content: center;
+        align-items: center;
+        }
+        
+    @media (max-width: 630px){
+    .content .icon1{
+        width: 50%;
+        height: 50%;
+        align-items: center;
+        align-content: center;
+            
+        }
+    
+    }
+
+</style>
+<section class="content">
+    <img class="icon1" src="{{url_for('static', filename='images/moboot.png')}}" alt="icon">
+</section>
+
+<section id="about" class="about">
+    <h1>ABOUT</h1>
+    <p>Moboot is a chatbot developed in Moroccan Darija, and it is considered the first of its kind. Its name "Moboot" was chosen to align with Moroccan culture, as the name Mohammed is popular in this country and holds significant cultural connotations and dimensions. <br>
+
+        Based on a collection of Moroccan phrases and responses, Moboot has been trained to engage in relatively short conversations with users. <br>
+        
+        Moboot is currently in the development stage and does not yet possess sufficient data to be fully functional. It is available to anyone in the technical and information field for further development or to obtain some information that may be beneficial for personal projects. <br>
+        
+        What are you waiting for? Sign up and start chatting with me! <br>
+        
+        Note: This chatbot is for educational purposes only, and anyone can enter and provide feedback on its design. It was developed using Python programming language, utilizing neural networks within the TensorFlow framework. The model has been trained and made available online thanks to the Flask framework, responsible for its API. <br></p>
+</section>
+
+<section id="contact" class="contact">
+    <h1>CONTACT</h1>
+    <div class="contact0">
+        <div>
+            <p>Email : {{email}}</p>
+            <p>github : {{github}}</p>
+            <p>LinkedIn : {{linkedIn}}</p>
+        </div>
+        <div class="contact1" >
+            <img class="icon2" src="{{url_for('static', filename='images/moboot.png')}}" alt="icon">
+            <p>Copyright 2023</p>
+        </div>
+    </div>
+    
+</section>
+
+
+{% endblock %}

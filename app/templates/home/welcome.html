@@ -1,0 +1,261 @@
+{% extends "layout.html" %}
+{% block title %}{{ title }}{% endblock %}
+{% block body %}
+
+    <<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <style>
+      body {
+        font-family: monospace;
+      }
+      h1 {
+        background-color: rgba(75, 150, 212, 0);
+        display: inline-block;
+        font-size: 4em;
+        margin: 0;
+        padding: 14px;
+      }
+      h3 {
+        color: black;
+        font-size: 20px;
+        margin-top: 3px;
+        text-align: center;
+      }
+      #chatbox {
+        background: rgba(192, 144, 247, 0.3) ;
+        margin-left: auto;
+        margin-right: auto;
+        width: 60%;
+        margin-top: 60px;
+        border-radius: 30px;
+        height: 60%;
+        margin: auto;
+        padding: 20px 10px;
+
+        align-items: center;
+        justify-content: space-between;
+      }
+      #userInput {
+        margin-left: auto;
+        margin-right: auto;
+        
+        background: rgba(192, 144, 247, 0.3) ;
+        border-radius: 30px;
+        height: 90px;
+        width: 800px;
+        margin: auto;
+        margin-top: 30px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        width: 60%;
+        margin-top: 60px;
+        
+      }
+
+
+      #textInput {
+        width: 80%;
+        padding: 10px;
+        border-radius: 30px;
+        text-align: center;
+        border-bottom: 3px solid black;
+        font-family: monospace;
+        font-size: 17px;
+        transition: 0.4s;
+        
+      }
+      #textInput:hover{
+        padding: 30px;
+        background-color: rgb(204, 208, 210);
+      }
+
+      .userText {
+        color: white;
+        font-family: monospace;
+        font-size: 20px;
+        text-align: right;
+        line-height: 30px;
+        margin: 23px 0px;
+      }
+      .userText span {
+        background-color: #808080;
+        padding: 10px;
+        border-radius: 25px;
+      }
+      .botText {
+        color: white;
+        font-family: monospace;
+        font-size: 20px;
+        text-align: left;
+        line-height: 30px;
+        margin: 23px 0px;
+      }
+      .botText span {
+        background-color: #4169e1;
+        padding: 10px;
+        border-radius: 25px;
+      }
+      #tidbit {
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        width: 300px;
+      }
+      .boxed {
+        margin-left: auto;
+        margin-right: auto;
+        width: 78%;
+        margin-top: 60px;
+        border: 0px solid green;
+      }
+      .box {
+        border: 2px solid black;
+      }
+      #sndbtn{
+        padding: 10px 10px;
+        border-radius: 30px;
+        
+        background: dodgerblue;
+        transition: 0.4s;
+        }
+    #sndbtn:hover{
+        padding: 30px;
+        background: rgb(7, 27, 48);
+        color: #fff;
+        }
+    #sdown{
+        position: fixed;
+        font-size: 19px;
+        height: 50px;
+        color: azure;
+        width: 50px;
+        background: #808080;
+        border: none;
+        border-radius: 30px;
+        cursor: pointer;
+        top: 200px;
+        right: 10px;
+        justify-content: center;
+
+      }
+    #sup{
+        font-weight: 300;
+        font-size: 25px;
+        color: azure;
+        position: fixed;
+        height: 50px;
+        width: 50px;
+        background: #4169e1;
+        border: none;
+        border-radius: 30px;
+        cursor: pointer;
+        bottom: 50px;
+        right: 10px;
+        display: none;
+        justify-content: center;
+        
+
+
+      }
+    </style>
+
+  <center>
+    <h1>
+      welcome
+    </h1>
+  </center>
+  <button id="sdown">v</button>
+  <button id="sup">^</button>
+
+<div class="box"></div>
+  <div class="boxed">
+    <div >
+      <div id="chatbox">
+
+        {% for x in data %}
+            <p class="userText"><span>{{ x["msgs"]["msg"] }}</span></p>
+            <p class="botText"><span>{{ x["msgs"]["response"] }}</span></p>
+        {% endfor %}
+
+      </div>
+      <div id="userInput">
+        
+        <input id="textInput" type="text" name="msg" placeholder="Type your message here" />
+        <input type="submit" id="sndbtn" value="Send">
+        
+      </div>
+    </div>
+  </div>
+  <div style="height: 48vh;"></div>
+  
+  <script>
+
+      let sup = document.getElementById("sup");
+      let sdown = document.getElementById("sdown");
+      scroll({
+          left:0,
+          top:document.body.scrollHeight})
+      let y_max = scrollY
+      scroll({
+          left:0,
+          top:0})
+
+      window.onscroll = function(){
+        if (scrollY >= 400){
+          sup.style.display = 'block';
+          if (scrollY >= (y_max-400)){sdown.style.display = 'none';
+          }else{sdown.style.display = 'block';}
+        }else{
+          sup.style.display = 'none';
+          sdown.style.display = 'block';
+        }}
+
+      sup.onclick = function(){
+        scroll({
+          left:0,
+          top:0,
+          behavior:'smooth'
+        })
+      }
+      sdown.onclick = function(){
+        var height = document.body.scrollHeight;
+        scroll({
+          left:0,
+          top:height,
+          behavior:'smooth'
+        })}
+
+
+      function getBotResponse() {
+        var rawText = $("#textInput").val();
+        var userHtml = '<p class="userText"><span>' + rawText + "</span></p>";
+        $("#textInput").val("");
+        $("#chatbox").append(userHtml);
+        document
+          .getElementById("userInput")
+          .scrollIntoView({ block: "start", behavior: "smooth" });
+        $.get("/get", { msg: rawText }).done(function(data) {
+          var botHtml = '<p class="botText"><span style="margin:80px 0px;" >' + data + "</span></p>";
+          $("#chatbox").append(botHtml);
+          document
+            .getElementById("userInput")
+            .scrollIntoView({ block: "start", behavior: "smooth" });
+        });
+      }
+      $("#textInput").keypress(function(e) {
+        if (e.which == 13) {
+          getBotResponse();
+        }
+        
+      });
+      $("#sndbtn").click(function(e) {
+        if (e.which) {
+          getBotResponse();
+        }
+
+    });
+      
+</script>
+
+{% endblock %}
