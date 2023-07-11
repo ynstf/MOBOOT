@@ -1,7 +1,7 @@
 from flask import Blueprint, render_template, session, request
 from flask_login import  login_required, current_user
 from random import choice
-from train_module import process
+#from train_module import process
 from time import sleep
 from app import app
 import json
@@ -52,7 +52,8 @@ def get_bot_reponse():
 
     #make respons from the boot
     userText = request.args.get('msg')
-    resp = str(process(userText))
+    #resp = str(process(userText))
+    resp = "hhhh"
 
     #save the messages in mongodb database
     db = mongo.db
