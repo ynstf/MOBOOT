@@ -38,7 +38,7 @@ marshmallow-sqlalchemy==0.23.0
 mock==5.0.2
 mysql-connector-python==8.0.33
 nltk==3.4.5
-numpy==1.21.6
+numpy
 Pillow==9.5.0
 protobuf==3.19.0
 PyJWT==2.4.0
