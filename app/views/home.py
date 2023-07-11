@@ -8,7 +8,8 @@ import json
 from flask_pymongo import PyMongo
 
 #uri = "mongodb+srv://ynstf:ynstf2023@cluster0.s6fqvmm.mongodb.net/db_msgs"
-#mongo = PyMongo(app, uri=uri)
+uri = "mongodb://ynstf:ynstf2023@iad2-c12-1.mongo.objectrocket.com:53515,iad2-c12-2.mongo.objectrocket.com:53515,iad2-c12-0.mongo.objectrocket.com:53515/db_msgs?replicaSet=747aaeac3c6c4f359b4ffc81cfd04230"
+mongo = PyMongo(app, uri=uri)
 
 
 home = Blueprint('home', __name__)
@@ -29,13 +30,13 @@ def welcome():
 
 
     # get data from mongo database and jsonifay it
-    """try :
-        db = mongo.db
-        data = db.messages.find({"user_id":f"{session['id']}"},{"_id":False,"msgs":True})
-        data = list(data)[:]
-        data = json.dumps(data)
-        data = json.loads(data)
-    except :
+    #try :
+    db = mongo.db
+    data = db.messages.find({"user_id":f"{session['id']}"},{"_id":False,"msgs":True})
+    data = list(data)[:]
+    data = json.dumps(data)
+    data = json.loads(data)
+    """except :
         doc = {"user_id":f"{session['id']}","msgs":{"msg":" ","response":" "}}
         db.messages.insert_one(doc)
         data = list(data)[:]
@@ -43,7 +44,7 @@ def welcome():
         data = json.loads(data)"""
 
     #load welcome page with all messages for the current user
-    return render_template('home/welcome.html',title=title,nick_name=session['last_name'])#data=data
+    return render_template('home/welcome.html',title=title,nick_name=session['last_name'],data=data)
 
 
 
@@ -55,7 +56,7 @@ def get_bot_reponse():
     resp = str(process(userText))
 
     #save the messages in mongodb database
-    #db = mongo.db
+    db = mongo.db
     if userText.strip()=="":
 
         #make respanse for the empty messages if user enter empty message
@@ -64,15 +65,15 @@ def get_bot_reponse():
         sleep(1.5)
 
         #save the resp
-        #doc = {"user_id":f"{session['id']}","msgs":{"msg":f"{userText}","response":f"{resp}"}}
-        #db.messages.insert_one(doc)
+        doc = {"user_id":f"{session['id']}","msgs":{"msg":f"{userText}","response":f"{resp}"}}
+        db.messages.insert_one(doc)
 
         #send the resp to the welcome page
         return resp
     
     #save the resp
-    #doc = {"user_id":f"{session['id']}","msgs":{"msg":f"{userText}","response":f"{resp}"}}
-    #db.messages.insert_one(doc)
+    doc = {"user_id":f"{session['id']}","msgs":{"msg":f"{userText}","response":f"{resp}"}}
+    db.messages.insert_one(doc)
 
     #send the response to the welcome page
     return resp
