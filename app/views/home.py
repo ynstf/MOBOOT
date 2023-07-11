@@ -6,8 +6,20 @@ from time import sleep
 from app import app
 import json
 from flask_pymongo import PyMongo
+uri = "mongodb+srv://ynstf:ynstf2023@cluster0.s6fqvmm.mongodb.net/db_msgs"
+mongo = PyMongo(app, uri=uri)
 
-mongo = PyMongo(app, uri="mongodb://localhost:27017/modboot")
+"""doc = {"user_id":"94645945","msgs":{"msg":"hi","response":"hello"}}
+db.messages.insert_one(doc)"""
+
+"""dblist = mongo.list_database_names()
+if "db_msgs" in dblist:
+    print("The database exists.")
+else:
+    mydb = mongo["db_msgs"]
+    mycol = mydb["messages"]
+"""
+
 home = Blueprint('home', __name__)
 
 @home.route('/')
@@ -80,7 +92,7 @@ def admin():
             title_admin = "shhhh! : secret page"
 
             #read all messages
-            mongo = PyMongo(app, uri="mongodb://localhost:27017/modboot")
+            mongo = PyMongo(app, uri=uri)
             db = mongo.db
             msgs = db.messages.find({},{"_id":False,"user_id":True,"msgs":True})
             msgs = list(msgs)[:]
@@ -89,10 +101,11 @@ def admin():
 
             #read all users
             mydb = mysql.connector.connect(
-                host="localhost",
-                user="root",
-                password="",
-                database="modb"
+                host="pk1l4ihepirw9fob.cbetxkdyhwsb.us-east-1.rds.amazonaws.com",
+                user="knjxnvb5k5pd0ypg",
+                password="ygshse0motylmxp8",
+                port=3306,
+                database="x40kaa6wfl5txd75"
                 )
             mycursor = mydb.cursor()
             sql = "SELECT * FROM user"

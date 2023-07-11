@@ -29,11 +29,6 @@
         "responses": ["ana tzadit f 2023", "ma 3andich 3mor mo7adad, lwa9t khasiya ka tsri 3la lka2inat l7aya", "ba9i ma tzaditch bach ykon 3andi 3mor"],
         "context_set": ""
                 },
-                {"tag": "humer",
-        "patterns": ["h","hh","hhh","hhhhhh","hhhhhhhhhhh ","hahaha","mod7k","hhhh ","da7aktini","d7ak"],
-        "responses": ["hhhhhhhhhhhhhhhhhh", "hahahaha"],
-        "context_set": ""
-                },
                 {"tag": "help",
         "patterns": ["momkin nssewlek","bghit nsewlek ","nsewlek","nssawlek","3andi so2al ","momkin tjawbni","jawbni"],
         "responses": ["ila 9dert n3awnek", "ma 3andich bzaaf lma3lomat"],
@@ -48,10 +43,5 @@
         "patterns": ["3awd liya nokta","nokta","9ol liya nokta","bghit nokta","nokat","gol lia chi nokta"],
         "responses": ["hada wa7ed lme3gaz wa7ed nhar mrato ka tdo9 lbab nsat sarot ,mafih ma ynod gal liha siri ldar bak rak mtal9a","hado wa7ed 3 bghaw ytkyfo ma l9awch brika w homa ysayfto wa7ed yjibha w mcha 9aleb 7ta 3ya w rja3 3and s7abo gal lihom rah ka n9aleb 3la brika wach ma 3andkomch ? galo lih raye7 rah 3ad sayfetna wa7ed yjibha","wa7ed gal lmrato ila wledti dri nsamiwh mbrok w ila wledti deriya nsmiwha mbroka , nhar wldat ja 3ando tbib gal lih alf mebrok w howa yskhaf","hada wa7ed l9ewass mcha l9ahwa ytfarej fwa7ed lmatch , bda lmatch bchi 40 min ghir mcha tchrob w howa ytmarka lbit rja3 yjri ma chafoch w fach daro i3ada kora derbat f poto"],
         "context_set": ""
-                },
-                {"tag": "error",
-        "patterns": ["nta mkalekh","nta 3iyan","ma ka tfhamch","ka t3awd lhadra","nta machi mzyan","nta 3yan"],
-        "responses": ["ana mprogrami ghir 3la data set sghira", "insha2alah nkber w n3ejbek :D"],
-        "context_set": ""
-		}
+                }
 ]}

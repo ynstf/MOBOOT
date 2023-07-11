@@ -78,7 +78,7 @@ try :
     else:
         raise FileNotFoundError
 except FileNotFoundError:
-    model.fit(training, output, n_epoch=1000, batch_size=8, show_metric=True)
+    model.fit(training, output, n_epoch=5000, batch_size=10, show_metric=True)
     model.save("model.tflearn")
 
 def bag_of_words(s, words):
@@ -99,7 +99,7 @@ def process(message):
     results = model.predict([bag_of_words(inp, words)])[0]
     results_index = numpy.argmax(results)
     tag = labels[results_index]
-    if results[results_index] > 0.6:
+    if results[results_index] > 0.8:
         for tg in data["intents"]:
             if tg['tag'] == tag:
                 responses = tg['responses']
