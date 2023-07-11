@@ -36,12 +36,20 @@ def home_page():
 def welcome():
     title = f"MoBoot : Welcome {session['last_name']}!"
 
+
     # get data from mongo database and jsonifay it
-    db = mongo.db
-    data = db.messages.find({"user_id":f"{session['id']}"},{"_id":False,"msgs":True})
-    data = list(data)[:]
-    data = json.dumps(data)
-    data = json.loads(data)
+    try :
+        db = mongo.db
+        data = db.messages.find({"user_id":f"{session['id']}"},{"_id":False,"msgs":True})
+        data = list(data)[:]
+        data = json.dumps(data)
+        data = json.loads(data)
+    except :
+        doc = {"user_id":f"{session['id']}","msgs":{"msg":" ","response":" "}}
+        db.messages.insert_one(doc)
+        data = list(data)[:]
+        data = json.dumps(data)
+        data = json.loads(data)
 
     #load welcome page with all messages for the current user
     return render_template('home/welcome.html',title=title,nick_name=session['last_name'],data=data)
