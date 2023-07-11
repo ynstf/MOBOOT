@@ -79,7 +79,7 @@ def get_bot_reponse():
 @home.route('/admin', methods=['GET', 'POST'])
 def admin():
     try:
-        if current_user.email=="admin@admin.admin":
+        if current_user.email=="admin":
             
             import mysql.connector
             from flask_pymongo import PyMongo

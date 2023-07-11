@@ -9,7 +9,7 @@ class Config:
     SQLALCHEMY_DATABASE_URI = os.environ.get('SQLALCHEMY_DATABASE_URI')
     MONGO_URI = os.environ.get('MONGO_URI')
     SQLALCHEMY_TRACK_MODIFICATIONS = False
-    SECRET_KEY = "algorithm@1234556789"
+    SECRET_KEY = "azerty@1234556789"
 
 class development(Config):
     """ development configurations """
