@@ -6,19 +6,10 @@ from time import sleep
 from app import app
 import json
 from flask_pymongo import PyMongo
+
 uri = "mongodb+srv://ynstf:ynstf2023@cluster0.s6fqvmm.mongodb.net/db_msgs"
 mongo = PyMongo(app, uri=uri)
 
-"""doc = {"user_id":"94645945","msgs":{"msg":"hi","response":"hello"}}
-db.messages.insert_one(doc)"""
-
-"""dblist = mongo.list_database_names()
-if "db_msgs" in dblist:
-    print("The database exists.")
-else:
-    mydb = mongo["db_msgs"]
-    mycol = mydb["messages"]
-"""
 
 home = Blueprint('home', __name__)
 
@@ -53,6 +44,8 @@ def welcome():
 
     #load welcome page with all messages for the current user
     return render_template('home/welcome.html',title=title,nick_name=session['last_name'],data=data)
+
+
 
 @home.route("/get")
 def get_bot_reponse():
