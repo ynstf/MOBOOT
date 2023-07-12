@@ -30,18 +30,11 @@ def welcome():
 
 
     # get data from mongo database and jsonifay it
-    #try :
     db = mongo.db
     data = db.messages.find({"user_id":f"{session['id']}"},{"_id":False,"msgs":True})
     data = list(data)[:]
     data = json.dumps(data)
     data = json.loads(data)
-    """except :
-        doc = {"user_id":f"{session['id']}","msgs":{"msg":" ","response":" "}}
-        db.messages.insert_one(doc)
-        data = list(data)[:]
-        data = json.dumps(data)
-        data = json.loads(data)"""
 
     #load welcome page with all messages for the current user
     return render_template('home/welcome.html',title=title,nick_name=session['last_name'],data=data)
@@ -56,7 +49,7 @@ def get_bot_reponse():
     resp = str(process(userText))
 
     #save the messages in mongodb database
-    #db = mongo.db
+    db = mongo.db
     if userText.strip()=="":
 
         #make respanse for the empty messages if user enter empty message
@@ -65,15 +58,15 @@ def get_bot_reponse():
         sleep(1.5)
 
         #save the resp
-        #doc = {"user_id":f"{session['id']}","msgs":{"msg":f"{userText}","response":f"{resp}"}}
-        #db.messages.insert_one(doc)
+        doc = {"user_id":f"{session['id']}","msgs":{"msg":f"{userText}","response":f"{resp}"}}
+        db.messages.insert_one(doc)
 
         #send the resp to the welcome page
         return resp
     
     #save the resp
-    #doc = {"user_id":f"{session['id']}","msgs":{"msg":f"{userText}","response":f"{resp}"}}
-    #db.messages.insert_one(doc)
+    doc = {"user_id":f"{session['id']}","msgs":{"msg":f"{userText}","response":f"{resp}"}}
+    db.messages.insert_one(doc)
 
     #send the response to the welcome page
     return resp
@@ -89,17 +82,16 @@ def admin():
             from app import app
             import json
 
-            
             form = sherch()
             title_admin = "shhhh! : secret page"
 
             #read all messages
-            """mongo = PyMongo(app, uri=uri)
+            mongo = PyMongo(app, uri=uri)
             db = mongo.db
             msgs = db.messages.find({},{"_id":False,"user_id":True,"msgs":True})
             msgs = list(msgs)[:]
             msgs = json.dumps(msgs)
-            msgs = json.loads(msgs)"""
+            msgs = json.loads(msgs)
 
             #read all users
             mydb = mysql.connector.connect(
