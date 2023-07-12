@@ -8,7 +8,7 @@ import json
 from flask_pymongo import PyMongo
 
 #uri = "mongodb+srv://ynstf:ynstf2023@cluster0.s6fqvmm.mongodb.net/db_msgs"
-uri = "mongodb://ynstf:ynstf2023@iad2-c12-1.mongo.objectrocket.com:53515,iad2-c12-2.mongo.objectrocket.com:53515,iad2-c12-0.mongo.objectrocket.com:53515/db_msgs?replicaSet=747aaeac3c6c4f359b4ffc81cfd04230"
+uri = "mongodb://ynstf:ynstf2023@iad2-c12-1.mongo.objectrocket.com:53515,iad2-c12-2.mongo.objectrocket.com:53515,iad2-c12-0.mongo.objectrocket.com:53515/db_msgs?replicaSet=747aaeac3c6c4f359b4ffc81cfd04230&retrywrites=false"
 mongo = PyMongo(app, uri=uri)
 
 
