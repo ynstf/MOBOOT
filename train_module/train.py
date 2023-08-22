@@ -1,4 +1,4 @@
-import tflearn
+"""import tflearn
 import tensorflow as tf
 
 tf.reset_default_graph()
@@ -13,4 +13,4 @@ def neural_net(training,output):
     net = tflearn.regression(net)
 
     model = tflearn.DNN(net)
-    return model
+    return model"""

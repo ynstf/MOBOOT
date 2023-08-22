@@ -1,23 +1,22 @@
-import nltk
+"""import nltk
 nltk.download('punkt')
-#from nltk.stem.lancaster import LancasterStemmer
-#stemmer = LancasterStemmer()
+from nltk.stem.lancaster import LancasterStemmer
+stemmer = LancasterStemmer()
+
 import numpy
-from . import train
+import tensorflow as tf
+import tflearn
 import random
 import json
 import pickle
+
 from time import sleep
-import os
 
-
-link = "intents.json"
-
-with open(link) as file:
+with open("intents.json") as file:
     data = json.load(file)
 
 try:
-    with open(link, "rb") as f:
+    with open("data.pickle", "rb") as f:
         words, labels, training, output = pickle.load(f)
 except:
     words = []
@@ -34,7 +33,7 @@ except:
         if intent["tag"] not in labels:
             labels.append(intent["tag"])
 
-    words = [w.lower() for w in words if w != "?"]
+    words = [stemmer.stem(w.lower()) for w in words if w != "?"]
     words = sorted(list(set(words)))
 
     labels = sorted(labels)
@@ -47,7 +46,7 @@ except:
     for x, doc in enumerate(docs_x):
         bag = []
 
-        wrds = [w for w in doc]
+        wrds = [stemmer.stem(w) for w in doc]
 
         for w in words:
             if w in wrds:
@@ -69,33 +68,68 @@ except:
     with open("data.pickle", "wb") as f:
         pickle.dump((words, labels, training, output), f)
 
+tf.reset_default_graph()
 
-model = train.neural_net(training,output)
+net = tflearn.input_data(shape=[None, len(training[0])])
+net = tflearn.fully_connected(net, 8)
+net = tflearn.fully_connected(net, 8)
+net = tflearn.fully_connected(net, len(output[0]), activation = "softmax")
+net = tflearn.regression(net)
 
-try :
-    if os.path.exists("checkpoint") and os.path.exists("model.tflearn.index"):
-        model.load("model.tflearn")
-    else:
-        raise FileNotFoundError
-except FileNotFoundError:
-    model.fit(training, output, n_epoch=5000, batch_size=10, show_metric=True)
-    model.save("model.tflearn")
+model = tflearn.DNN(net)
+
+
+model.fit(training, output, n_epoch=1000, batch_size=8, show_metric=True)
+model.save("model.tflearn")
 
 def bag_of_words(s, words):
     bag = [0 for _ in range(len(words))]
 
     s_words = nltk.word_tokenize(s)
-    s_words = [word.lower() for word in s_words]
+    s_words = [stemmer.stem(word.lower()) for word in s_words]
 
     for se in s_words:
         for i, w in enumerate(words):
             if w == se:
                 bag[i] = 1
             
-    return numpy.array(bag)
+    return numpy.array(bag)"""
 
 def process(message):
-    inp = message
+
+    import openai
+    import pandas as pd
+
+    # Set up the OpenAI API client
+    openai.api_key = "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"
+
+    all_messeges = []
+
+
+    
+    #all_messeges.append({'role': 'user', 'content': data_sentences})
+    #all_messeges.append({'role': 'user', 'content': semantic_categories1})
+    
+    msg = """
+    your identity : (you are moroccan boot
+    
+    dont ansswer me in chatgpt way i want you to answer me just on th question in darija
+
+    w ana bghitek tjawbni ghir bdarija,ok 
+    """
+    all_messeges.append({'role': 'user', 'content': msg})
+
+    all_messeges.append({'role': 'user', 'content': message})
+    completion = openai.ChatCompletion.create(
+    model = 'gpt-3.5-turbo',
+    messages = all_messeges,
+    temperature = 0  )
+    resp  = completion['choices'][0]['message']['content']
+    all_messeges.append({"role": "assistant", "content": resp})
+    print(resp)
+    return(resp)
+    
+    """inp = message
     results = model.predict([bag_of_words(inp, words)])[0]
     results_index = numpy.argmax(results)
     tag = labels[results_index]
@@ -103,10 +137,9 @@ def process(message):
         for tg in data["intents"]:
             if tg['tag'] == tag:
                 responses = tg['responses']
-        sleep(2)
+        sleep(3)
         Bot = random.choice(responses)
         return(Bot)
     else:
-        sleep(1)
-        return(random.choice(["ma fhamtch","t9der twade7 liya?","chno ka tgol?"]))
+        return("I don't understand!")"""
 

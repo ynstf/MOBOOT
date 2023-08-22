@@ -1,3 +1,4 @@
+
 {"intents": [
                 {"tag": "tarhib",
         "patterns": ["salam", "cv", "ach ka t3awd", "fin", "nharek mbrok", "kif lhal" , "sbah lkhayr" , "massae lkhayr" , "ahlan" , "cc" , "hani"],
