@@ -1,0 +1,636 @@
+[
+    {
+        "label": "FlaskForm",
+        "importPath": "flask_wtf",
+        "description": "flask_wtf",
+        "isExtraImport": true,
+        "detail": "flask_wtf",
+        "documentation": {}
+    },
+    {
+        "label": "StringField",
+        "importPath": "wtforms",
+        "description": "wtforms",
+        "isExtraImport": true,
+        "detail": "wtforms",
+        "documentation": {}
+    },
+    {
+        "label": "PasswordField",
+        "importPath": "wtforms",
+        "description": "wtforms",
+        "isExtraImport": true,
+        "detail": "wtforms",
+        "documentation": {}
+    },
+    {
+        "label": "SubmitField",
+        "importPath": "wtforms",
+        "description": "wtforms",
+        "isExtraImport": true,
+        "detail": "wtforms",
+        "documentation": {}
+    },
+    {
+        "label": "DataRequired",
+        "importPath": "wtforms.validators",
+        "description": "wtforms.validators",
+        "isExtraImport": true,
+        "detail": "wtforms.validators",
+        "documentation": {}
+    },
+    {
+        "label": "Email",
+        "importPath": "wtforms.validators",
+        "description": "wtforms.validators",
+        "isExtraImport": true,
+        "detail": "wtforms.validators",
+        "documentation": {}
+    },
+    {
+        "label": "Length",
+        "importPath": "wtforms.validators",
+        "description": "wtforms.validators",
+        "isExtraImport": true,
+        "detail": "wtforms.validators",
+        "documentation": {}
+    },
+    {
+        "label": "EqualTo",
+        "importPath": "wtforms.validators",
+        "description": "wtforms.validators",
+        "isExtraImport": true,
+        "detail": "wtforms.validators",
+        "documentation": {}
+    },
+    {
+        "label": "UserMixin",
+        "importPath": "flask_login",
+        "description": "flask_login",
+        "isExtraImport": true,
+        "detail": "flask_login",
+        "documentation": {}
+    },
+    {
+        "label": "login_user",
+        "importPath": "flask_login",
+        "description": "flask_login",
+        "isExtraImport": true,
+        "detail": "flask_login",
+        "documentation": {}
+    },
+    {
+        "label": "login_required",
+        "importPath": "flask_login",
+        "description": "flask_login",
+        "isExtraImport": true,
+        "detail": "flask_login",
+        "documentation": {}
+    },
+    {
+        "label": "logout_user",
+        "importPath": "flask_login",
+        "description": "flask_login",
+        "isExtraImport": true,
+        "detail": "flask_login",
+        "documentation": {}
+    },
+    {
+        "label": "current_user",
+        "importPath": "flask_login",
+        "description": "flask_login",
+        "isExtraImport": true,
+        "detail": "flask_login",
+        "documentation": {}
+    },
+    {
+        "label": "login_required",
+        "importPath": "flask_login",
+        "description": "flask_login",
+        "isExtraImport": true,
+        "detail": "flask_login",
+        "documentation": {}
+    },
+    {
+        "label": "current_user",
+        "importPath": "flask_login",
+        "description": "flask_login",
+        "isExtraImport": true,
+        "detail": "flask_login",
+        "documentation": {}
+    },
+    {
+        "label": "Blueprint",
+        "importPath": "flask",
+        "description": "flask",
+        "isExtraImport": true,
+        "detail": "flask",
+        "documentation": {}
+    },
+    {
+        "label": "render_template",
+        "importPath": "flask",
+        "description": "flask",
+        "isExtraImport": true,
+        "detail": "flask",
+        "documentation": {}
+    },
+    {
+        "label": "request",
+        "importPath": "flask",
+        "description": "flask",
+        "isExtraImport": true,
+        "detail": "flask",
+        "documentation": {}
+    },
+    {
+        "label": "flash",
+        "importPath": "flask",
+        "description": "flask",
+        "isExtraImport": true,
+        "detail": "flask",
+        "documentation": {}
+    },
+    {
+        "label": "redirect",
+        "importPath": "flask",
+        "description": "flask",
+        "isExtraImport": true,
+        "detail": "flask",
+        "documentation": {}
+    },
+    {
+        "label": "url_for",
+        "importPath": "flask",
+        "description": "flask",
+        "isExtraImport": true,
+        "detail": "flask",
+        "documentation": {}
+    },
+    {
+        "label": "session",
+        "importPath": "flask",
+        "description": "flask",
+        "isExtraImport": true,
+        "detail": "flask",
+        "documentation": {}
+    },
+    {
+        "label": "make_response",
+        "importPath": "flask",
+        "description": "flask",
+        "isExtraImport": true,
+        "detail": "flask",
+        "documentation": {}
+    },
+    {
+        "label": "Blueprint",
+        "importPath": "flask",
+        "description": "flask",
+        "isExtraImport": true,
+        "detail": "flask",
+        "documentation": {}
+    },
+    {
+        "label": "render_template",
+        "importPath": "flask",
+        "description": "flask",
+        "isExtraImport": true,
+        "detail": "flask",
+        "documentation": {}
+    },
+    {
+        "label": "session",
+        "importPath": "flask",
+        "description": "flask",
+        "isExtraImport": true,
+        "detail": "flask",
+        "documentation": {}
+    },
+    {
+        "label": "request",
+        "importPath": "flask",
+        "description": "flask",
+        "isExtraImport": true,
+        "detail": "flask",
+        "documentation": {}
+    },
+    {
+        "label": "Flask",
+        "importPath": "flask",
+        "description": "flask",
+        "isExtraImport": true,
+        "detail": "flask",
+        "documentation": {}
+    },
+    {
+        "label": "LoginForm",
+        "importPath": "app.forms.users",
+        "description": "app.forms.users",
+        "isExtraImport": true,
+        "detail": "app.forms.users",
+        "documentation": {}
+    },
+    {
+        "label": "RegisterForm",
+        "importPath": "app.forms.users",
+        "description": "app.forms.users",
+        "isExtraImport": true,
+        "detail": "app.forms.users",
+        "documentation": {}
+    },
+    {
+        "label": "User",
+        "importPath": "app.models.users",
+        "description": "app.models.users",
+        "isExtraImport": true,
+        "detail": "app.models.users",
+        "documentation": {}
+    },
+    {
+        "label": "generate_password_hash",
+        "importPath": "werkzeug.security",
+        "description": "werkzeug.security",
+        "isExtraImport": true,
+        "detail": "werkzeug.security",
+        "documentation": {}
+    },
+    {
+        "label": "check_password_hash",
+        "importPath": "werkzeug.security",
+        "description": "werkzeug.security",
+        "isExtraImport": true,
+        "detail": "werkzeug.security",
+        "documentation": {}
+    },
+    {
+        "label": "db",
+        "importPath": "app",
+        "description": "app",
+        "isExtraImport": true,
+        "detail": "app",
+        "documentation": {}
+    },
+    {
+        "label": "app",
+        "importPath": "app",
+        "description": "app",
+        "isExtraImport": true,
+        "detail": "app",
+        "documentation": {}
+    },
+    {
+        "label": "app",
+        "importPath": "app",
+        "description": "app",
+        "isExtraImport": true,
+        "detail": "app",
+        "documentation": {}
+    },
+    {
+        "label": "choice",
+        "importPath": "random",
+        "description": "random",
+        "isExtraImport": true,
+        "detail": "random",
+        "documentation": {}
+    },
+    {
+        "label": "process",
+        "importPath": "train_module",
+        "description": "train_module",
+        "isExtraImport": true,
+        "detail": "train_module",
+        "documentation": {}
+    },
+    {
+        "label": "sleep",
+        "importPath": "time",
+        "description": "time",
+        "isExtraImport": true,
+        "detail": "time",
+        "documentation": {}
+    },
+    {
+        "label": "json",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "json",
+        "description": "json",
+        "detail": "json",
+        "documentation": {}
+    },
+    {
+        "label": "PyMongo",
+        "importPath": "flask_pymongo",
+        "description": "flask_pymongo",
+        "isExtraImport": true,
+        "detail": "flask_pymongo",
+        "documentation": {}
+    },
+    {
+        "label": "PyMongo",
+        "importPath": "flask_pymongo",
+        "description": "flask_pymongo",
+        "isExtraImport": true,
+        "detail": "flask_pymongo",
+        "documentation": {}
+    },
+    {
+        "label": "os",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "os",
+        "description": "os",
+        "detail": "os",
+        "documentation": {}
+    },
+    {
+        "label": "tensorflow",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "tensorflow",
+        "description": "tensorflow",
+        "detail": "tensorflow",
+        "documentation": {}
+    },
+    {
+        "label": "RegisterForm",
+        "kind": 6,
+        "importPath": "app.forms.users",
+        "description": "app.forms.users",
+        "peekOfCode": "class RegisterForm(FlaskForm):\n    name = StringField(label=\"name\", validators=[DataRequired()])\n    last_name = StringField(label=\"last_name\", validators=[DataRequired()])\n    email = StringField(label=\"email\", validators=[DataRequired(), Email()])\n    password = PasswordField(label=\"password\", validators=[DataRequired(), Length(min=6)])\n    confirm  = PasswordField(label=\"confirm\", validators=[DataRequired(),EqualTo(fieldname='password')])\n    submit = SubmitField(label=\"Register\")\n# login form\nclass LoginForm(FlaskForm):\n    email = StringField('email', validators=[DataRequired(),Email()])",
+        "detail": "app.forms.users",
+        "documentation": {}
+    },
+    {
+        "label": "LoginForm",
+        "kind": 6,
+        "importPath": "app.forms.users",
+        "description": "app.forms.users",
+        "peekOfCode": "class LoginForm(FlaskForm):\n    email = StringField('email', validators=[DataRequired(),Email()])\n    password = PasswordField('password', validators=[DataRequired()])\n    submit = SubmitField('Login')\n# shearch input in admin page\nclass sherch(FlaskForm):\n    reserch = StringField(label=\"reserch\", validators=[DataRequired()])",
+        "detail": "app.forms.users",
+        "documentation": {}
+    },
+    {
+        "label": "sherch",
+        "kind": 6,
+        "importPath": "app.forms.users",
+        "description": "app.forms.users",
+        "peekOfCode": "class sherch(FlaskForm):\n    reserch = StringField(label=\"reserch\", validators=[DataRequired()])",
+        "detail": "app.forms.users",
+        "documentation": {}
+    },
+    {
+        "label": "User",
+        "kind": 6,
+        "importPath": "app.models.users",
+        "description": "app.models.users",
+        "peekOfCode": "class User(db.Model, UserMixin):\n    id = db.Column(db.Integer, autoincrement=True, primary_key=True)\n    name = db.Column(db.String(255))\n    last_name = db.Column(db.String(255))\n    email = db.Column(db.String(255), unique=True)\n    password = db.Column(db.String(255))",
+        "detail": "app.models.users",
+        "documentation": {}
+    },
+    {
+        "label": "login",
+        "kind": 2,
+        "importPath": "app.views.auth",
+        "description": "app.views.auth",
+        "peekOfCode": "def login():\n    #load page\n    title = \"Login\"\n    form = LoginForm()\n    if request.method == \"GET\":\n        return render_template('auth/login.html',title=title,form=form)\n    email = request.form.get('email')\n    password = request.form.get('password')\n    user = User.query.filter_by(email=email).first()\n    #admin page",
+        "detail": "app.views.auth",
+        "documentation": {}
+    },
+    {
+        "label": "register",
+        "kind": 2,
+        "importPath": "app.views.auth",
+        "description": "app.views.auth",
+        "peekOfCode": "def register():\n    #load page\n    title = \"Register\"\n    form = RegisterForm()\n    if request.method == \"GET\":\n        return render_template('auth/register.html', title=title, form=form)\n    name = request.form.get('name')\n    last_name = request.form.get('last_name')\n    email = request.form.get('email')\n    password = request.form.get('password')",
+        "detail": "app.views.auth",
+        "documentation": {}
+    },
+    {
+        "label": "logout",
+        "kind": 2,
+        "importPath": "app.views.auth",
+        "description": "app.views.auth",
+        "peekOfCode": "def logout():\n    session.pop('last_name', None)\n    logout_user()\n    return redirect(url_for('home.home_page'))",
+        "detail": "app.views.auth",
+        "documentation": {}
+    },
+    {
+        "label": "auth",
+        "kind": 5,
+        "importPath": "app.views.auth",
+        "description": "app.views.auth",
+        "peekOfCode": "auth = Blueprint('auth', __name__)\n#login\n@auth.route('/login', methods=['GET', 'POST'])\ndef login():\n    #load page\n    title = \"Login\"\n    form = LoginForm()\n    if request.method == \"GET\":\n        return render_template('auth/login.html',title=title,form=form)\n    email = request.form.get('email')",
+        "detail": "app.views.auth",
+        "documentation": {}
+    },
+    {
+        "label": "home_page",
+        "kind": 2,
+        "importPath": "app.views.home",
+        "description": "app.views.home",
+        "peekOfCode": "def home_page():\n    title = \"MoBoot\"\n    email = \"younessatif1.0@gmail.com\"\n    github = \"github.com/ynstf/\"\n    linkedIn = \"linkedin.com/in/ynstf/\"\n    return render_template('home/index.html', title = title, email = email, github = github, linkedIn = linkedIn)\n@home.route('/welcome')\n@login_required\ndef welcome():\n    title = f\"MoBoot : Welcome {session['last_name']}!\"",
+        "detail": "app.views.home",
+        "documentation": {}
+    },
+    {
+        "label": "welcome",
+        "kind": 2,
+        "importPath": "app.views.home",
+        "description": "app.views.home",
+        "peekOfCode": "def welcome():\n    title = f\"MoBoot : Welcome {session['last_name']}!\"\n    # get data from mongo database and jsonifay it\n    db = mongo.db\n    data = db.messages.find({\"user_id\":f\"{session['id']}\"},{\"_id\":False,\"msgs\":True})\n    data = list(data)[:]\n    data = json.dumps(data)\n    data = json.loads(data)\n    #load welcome page with all messages for the current user\n    return render_template('home/welcome.html',title=title,nick_name=session['last_name'],data=data)",
+        "detail": "app.views.home",
+        "documentation": {}
+    },
+    {
+        "label": "get_bot_reponse",
+        "kind": 2,
+        "importPath": "app.views.home",
+        "description": "app.views.home",
+        "peekOfCode": "def get_bot_reponse():\n    #make respons from the boot\n    userText = request.args.get('msg')\n    resp = str(process(userText))\n    #save the messages in mongodb database\n    db = mongo.db\n    if userText.strip()==\"\":\n        #make respanse for the empty messages if user enter empty message\n        empty = [\"message khawi!!!\",\"gol chi 7aja\",\"hdar m3aaya!\",\"ma tb9ach tsayfet message khawi :(\"]\n        resp = str(choice(empty))",
+        "detail": "app.views.home",
+        "documentation": {}
+    },
+    {
+        "label": "admin",
+        "kind": 2,
+        "importPath": "app.views.home",
+        "description": "app.views.home",
+        "peekOfCode": "def admin():\n    try:\n        if current_user.email==\"admin@admin.admin\":\n            import mysql.connector\n            from flask_pymongo import PyMongo\n            from app.forms.users import sherch\n            from app import app\n            import json\n            form = sherch()\n            title_admin = \"shhhh! : secret page\"",
+        "detail": "app.views.home",
+        "documentation": {}
+    },
+    {
+        "label": "#uri",
+        "kind": 5,
+        "importPath": "app.views.home",
+        "description": "app.views.home",
+        "peekOfCode": "#uri = \"mongodb+srv://ynstf:ynstf2023@cluster0.s6fqvmm.mongodb.net/db_msgs\"\nuri = \"mongodb://ynstf:ynstf2023@iad2-c12-1.mongo.objectrocket.com:53515,iad2-c12-2.mongo.objectrocket.com:53515,iad2-c12-0.mongo.objectrocket.com:53515/db_msgs?replicaSet=747aaeac3c6c4f359b4ffc81cfd04230&retrywrites=false\"\nmongo = PyMongo(app, uri=uri)\nhome = Blueprint('home', __name__)\n@home.route('/')\ndef home_page():\n    title = \"MoBoot\"\n    email = \"younessatif1.0@gmail.com\"\n    github = \"github.com/ynstf/\"\n    linkedIn = \"linkedin.com/in/ynstf/\"",
+        "detail": "app.views.home",
+        "documentation": {}
+    },
+    {
+        "label": "uri",
+        "kind": 5,
+        "importPath": "app.views.home",
+        "description": "app.views.home",
+        "peekOfCode": "uri = \"mongodb://ynstf:ynstf2023@iad2-c12-1.mongo.objectrocket.com:53515,iad2-c12-2.mongo.objectrocket.com:53515,iad2-c12-0.mongo.objectrocket.com:53515/db_msgs?replicaSet=747aaeac3c6c4f359b4ffc81cfd04230&retrywrites=false\"\nmongo = PyMongo(app, uri=uri)\nhome = Blueprint('home', __name__)\n@home.route('/')\ndef home_page():\n    title = \"MoBoot\"\n    email = \"younessatif1.0@gmail.com\"\n    github = \"github.com/ynstf/\"\n    linkedIn = \"linkedin.com/in/ynstf/\"\n    return render_template('home/index.html', title = title, email = email, github = github, linkedIn = linkedIn)",
+        "detail": "app.views.home",
+        "documentation": {}
+    },
+    {
+        "label": "mongo",
+        "kind": 5,
+        "importPath": "app.views.home",
+        "description": "app.views.home",
+        "peekOfCode": "mongo = PyMongo(app, uri=uri)\nhome = Blueprint('home', __name__)\n@home.route('/')\ndef home_page():\n    title = \"MoBoot\"\n    email = \"younessatif1.0@gmail.com\"\n    github = \"github.com/ynstf/\"\n    linkedIn = \"linkedin.com/in/ynstf/\"\n    return render_template('home/index.html', title = title, email = email, github = github, linkedIn = linkedIn)\n@home.route('/welcome')",
+        "detail": "app.views.home",
+        "documentation": {}
+    },
+    {
+        "label": "home",
+        "kind": 5,
+        "importPath": "app.views.home",
+        "description": "app.views.home",
+        "peekOfCode": "home = Blueprint('home', __name__)\n@home.route('/')\ndef home_page():\n    title = \"MoBoot\"\n    email = \"younessatif1.0@gmail.com\"\n    github = \"github.com/ynstf/\"\n    linkedIn = \"linkedin.com/in/ynstf/\"\n    return render_template('home/index.html', title = title, email = email, github = github, linkedIn = linkedIn)\n@home.route('/welcome')\n@login_required",
+        "detail": "app.views.home",
+        "documentation": {}
+    },
+    {
+        "label": "Config",
+        "kind": 6,
+        "importPath": "config.settings",
+        "description": "config.settings",
+        "peekOfCode": "class Config:\n    \"\"\" basic configurations \"\"\"\n    DEBUG = False\n    PORT = os.environ.get('PORT') or 5000\n    ENV = os.environ.get('FLASK_ENV')\n    FLASK_APP = os.environ.get('FLASK_APP')\n    SQLALCHEMY_DATABASE_URI = os.environ.get('SQLALCHEMY_DATABASE_URI')\n    MONGO_URI = os.environ.get('MONGO_URI')\n    SQLALCHEMY_TRACK_MODIFICATIONS = False\n    SECRET_KEY = \"azerty@1234556789\"",
+        "detail": "config.settings",
+        "documentation": {}
+    },
+    {
+        "label": "development",
+        "kind": 6,
+        "importPath": "config.settings",
+        "description": "config.settings",
+        "peekOfCode": "class development(Config):\n    \"\"\" development configurations \"\"\"\n    DEBUG = True\nclass production(Config):\n    \"\"\" production configurations \"\"\"\n    PORT = os.environ.get('PORT') or 8080",
+        "detail": "config.settings",
+        "documentation": {}
+    },
+    {
+        "label": "production",
+        "kind": 6,
+        "importPath": "config.settings",
+        "description": "config.settings",
+        "peekOfCode": "class production(Config):\n    \"\"\" production configurations \"\"\"\n    PORT = os.environ.get('PORT') or 8080",
+        "detail": "config.settings",
+        "documentation": {}
+    },
+    {
+        "label": "neural_net",
+        "kind": 2,
+        "importPath": "train_module.train",
+        "description": "train_module.train",
+        "peekOfCode": "def neural_net(training,output):\n    net = tflearn.input_data(shape=[None, len(training[0])])\n    net = tflearn.fully_connected(net, 8)\n    net = tflearn.fully_connected(net, 10)\n    net = tflearn.fully_connected(net, 10)\n    net = tflearn.fully_connected(net, 8)\n    net = tflearn.fully_connected(net, len(output[0]), activation = \"softmax\")\n    net = tflearn.regression(net)\n    model = tflearn.DNN(net)\n    return model\"\"\"",
+        "detail": "train_module.train",
+        "documentation": {}
+    },
+    {
+        "label": "hi",
+        "kind": 2,
+        "importPath": "test",
+        "description": "test",
+        "peekOfCode": "def hi():\n    title = 'hi'\n    return title\nuri = \"mongodb://ynstf:ynstf2023@iad2-c12-1.mongo.objectrocket.com:53515,iad2-c12-2.mongo.objectrocket.com:53515,iad2-c12-0.mongo.objectrocket.com:53515/db_msgs?replicaSet=747aaeac3c6c4f359b4ffc81cfd04230&retrywrites=false\"\nmongo = PyMongo(app,uri=uri)\ndb = mongo.db\ndata = db.messages.find({\"user_id\":\"3\"},{\"_id\":False,\"msgs\":True})\nprint(data)\ndoc = {\"user_id\":\"3\",\"msgs\":{\"msg\":\"lgo\",\"response\":\"zert\"}}\ndb.messages.insert_one(doc)",
+        "detail": "test",
+        "documentation": {}
+    },
+    {
+        "label": "app",
+        "kind": 5,
+        "importPath": "test",
+        "description": "test",
+        "peekOfCode": "app = Flask(__name__)\napp.config['ORMONGO_REGION'] = \"IAD\"\napp.config['ORMONGO_RS_URL'] = 'mongodb://iad2-c12-1.mongo.objectrocket.com:53515,iad2-c12-2.mongo.objectrocket.com:53515,iad2-c12-0.mongo.objectrocket.com:53515/?replicaSet=747aaeac3c6c4f359b4ffc81cfd04230&ssl=true'\napp.config['ORMONGO_URL'] = 'mongodb://iad2-c12-1.mongo.objectrocket.com:53515?ssl=true'\n@app.route(\"/\")\ndef hi():\n    title = 'hi'\n    return title\nuri = \"mongodb://ynstf:ynstf2023@iad2-c12-1.mongo.objectrocket.com:53515,iad2-c12-2.mongo.objectrocket.com:53515,iad2-c12-0.mongo.objectrocket.com:53515/db_msgs?replicaSet=747aaeac3c6c4f359b4ffc81cfd04230&retrywrites=false\"\nmongo = PyMongo(app,uri=uri)",
+        "detail": "test",
+        "documentation": {}
+    },
+    {
+        "label": "app.config['ORMONGO_REGION']",
+        "kind": 5,
+        "importPath": "test",
+        "description": "test",
+        "peekOfCode": "app.config['ORMONGO_REGION'] = \"IAD\"\napp.config['ORMONGO_RS_URL'] = 'mongodb://iad2-c12-1.mongo.objectrocket.com:53515,iad2-c12-2.mongo.objectrocket.com:53515,iad2-c12-0.mongo.objectrocket.com:53515/?replicaSet=747aaeac3c6c4f359b4ffc81cfd04230&ssl=true'\napp.config['ORMONGO_URL'] = 'mongodb://iad2-c12-1.mongo.objectrocket.com:53515?ssl=true'\n@app.route(\"/\")\ndef hi():\n    title = 'hi'\n    return title\nuri = \"mongodb://ynstf:ynstf2023@iad2-c12-1.mongo.objectrocket.com:53515,iad2-c12-2.mongo.objectrocket.com:53515,iad2-c12-0.mongo.objectrocket.com:53515/db_msgs?replicaSet=747aaeac3c6c4f359b4ffc81cfd04230&retrywrites=false\"\nmongo = PyMongo(app,uri=uri)\ndb = mongo.db",
+        "detail": "test",
+        "documentation": {}
+    },
+    {
+        "label": "app.config['ORMONGO_RS_URL']",
+        "kind": 5,
+        "importPath": "test",
+        "description": "test",
+        "peekOfCode": "app.config['ORMONGO_RS_URL'] = 'mongodb://iad2-c12-1.mongo.objectrocket.com:53515,iad2-c12-2.mongo.objectrocket.com:53515,iad2-c12-0.mongo.objectrocket.com:53515/?replicaSet=747aaeac3c6c4f359b4ffc81cfd04230&ssl=true'\napp.config['ORMONGO_URL'] = 'mongodb://iad2-c12-1.mongo.objectrocket.com:53515?ssl=true'\n@app.route(\"/\")\ndef hi():\n    title = 'hi'\n    return title\nuri = \"mongodb://ynstf:ynstf2023@iad2-c12-1.mongo.objectrocket.com:53515,iad2-c12-2.mongo.objectrocket.com:53515,iad2-c12-0.mongo.objectrocket.com:53515/db_msgs?replicaSet=747aaeac3c6c4f359b4ffc81cfd04230&retrywrites=false\"\nmongo = PyMongo(app,uri=uri)\ndb = mongo.db\ndata = db.messages.find({\"user_id\":\"3\"},{\"_id\":False,\"msgs\":True})",
+        "detail": "test",
+        "documentation": {}
+    },
+    {
+        "label": "app.config['ORMONGO_URL']",
+        "kind": 5,
+        "importPath": "test",
+        "description": "test",
+        "peekOfCode": "app.config['ORMONGO_URL'] = 'mongodb://iad2-c12-1.mongo.objectrocket.com:53515?ssl=true'\n@app.route(\"/\")\ndef hi():\n    title = 'hi'\n    return title\nuri = \"mongodb://ynstf:ynstf2023@iad2-c12-1.mongo.objectrocket.com:53515,iad2-c12-2.mongo.objectrocket.com:53515,iad2-c12-0.mongo.objectrocket.com:53515/db_msgs?replicaSet=747aaeac3c6c4f359b4ffc81cfd04230&retrywrites=false\"\nmongo = PyMongo(app,uri=uri)\ndb = mongo.db\ndata = db.messages.find({\"user_id\":\"3\"},{\"_id\":False,\"msgs\":True})\nprint(data)",
+        "detail": "test",
+        "documentation": {}
+    },
+    {
+        "label": "uri",
+        "kind": 5,
+        "importPath": "test",
+        "description": "test",
+        "peekOfCode": "uri = \"mongodb://ynstf:ynstf2023@iad2-c12-1.mongo.objectrocket.com:53515,iad2-c12-2.mongo.objectrocket.com:53515,iad2-c12-0.mongo.objectrocket.com:53515/db_msgs?replicaSet=747aaeac3c6c4f359b4ffc81cfd04230&retrywrites=false\"\nmongo = PyMongo(app,uri=uri)\ndb = mongo.db\ndata = db.messages.find({\"user_id\":\"3\"},{\"_id\":False,\"msgs\":True})\nprint(data)\ndoc = {\"user_id\":\"3\",\"msgs\":{\"msg\":\"lgo\",\"response\":\"zert\"}}\ndb.messages.insert_one(doc)\ndata = db.messages.find({\"user_id\":\"3\"},{\"_id\":False,\"msgs\":True})\nprint(data)",
+        "detail": "test",
+        "documentation": {}
+    },
+    {
+        "label": "mongo",
+        "kind": 5,
+        "importPath": "test",
+        "description": "test",
+        "peekOfCode": "mongo = PyMongo(app,uri=uri)\ndb = mongo.db\ndata = db.messages.find({\"user_id\":\"3\"},{\"_id\":False,\"msgs\":True})\nprint(data)\ndoc = {\"user_id\":\"3\",\"msgs\":{\"msg\":\"lgo\",\"response\":\"zert\"}}\ndb.messages.insert_one(doc)\ndata = db.messages.find({\"user_id\":\"3\"},{\"_id\":False,\"msgs\":True})\nprint(data)",
+        "detail": "test",
+        "documentation": {}
+    },
+    {
+        "label": "db",
+        "kind": 5,
+        "importPath": "test",
+        "description": "test",
+        "peekOfCode": "db = mongo.db\ndata = db.messages.find({\"user_id\":\"3\"},{\"_id\":False,\"msgs\":True})\nprint(data)\ndoc = {\"user_id\":\"3\",\"msgs\":{\"msg\":\"lgo\",\"response\":\"zert\"}}\ndb.messages.insert_one(doc)\ndata = db.messages.find({\"user_id\":\"3\"},{\"_id\":False,\"msgs\":True})\nprint(data)",
+        "detail": "test",
+        "documentation": {}
+    },
+    {
+        "label": "data",
+        "kind": 5,
+        "importPath": "test",
+        "description": "test",
+        "peekOfCode": "data = db.messages.find({\"user_id\":\"3\"},{\"_id\":False,\"msgs\":True})\nprint(data)\ndoc = {\"user_id\":\"3\",\"msgs\":{\"msg\":\"lgo\",\"response\":\"zert\"}}\ndb.messages.insert_one(doc)\ndata = db.messages.find({\"user_id\":\"3\"},{\"_id\":False,\"msgs\":True})\nprint(data)",
+        "detail": "test",
+        "documentation": {}
+    },
+    {
+        "label": "doc",
+        "kind": 5,
+        "importPath": "test",
+        "description": "test",
+        "peekOfCode": "doc = {\"user_id\":\"3\",\"msgs\":{\"msg\":\"lgo\",\"response\":\"zert\"}}\ndb.messages.insert_one(doc)\ndata = db.messages.find({\"user_id\":\"3\"},{\"_id\":False,\"msgs\":True})\nprint(data)",
+        "detail": "test",
+        "documentation": {}
+    },
+    {
+        "label": "data",
+        "kind": 5,
+        "importPath": "test",
+        "description": "test",
+        "peekOfCode": "data = db.messages.find({\"user_id\":\"3\"},{\"_id\":False,\"msgs\":True})\nprint(data)",
+        "detail": "test",
+        "documentation": {}
+    }
+]

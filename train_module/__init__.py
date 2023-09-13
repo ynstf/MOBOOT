@@ -101,7 +101,8 @@ def process(message):
     import pandas as pd
 
     # Set up the OpenAI API client
-    openai.api_key = "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"
+    #openai.api_key = "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"
+    openai.api_key = "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"
 
     all_messeges = []
 
