@@ -10,6 +10,7 @@ class Config:
     MONGO_URI = os.environ.get('MONGO_URI')
     SQLALCHEMY_TRACK_MODIFICATIONS = False
     SECRET_KEY = "azerty@1234556789"
+    chatgpt_token = os.environ.get('chatgpt_token')
 
 class development(Config):
     """ development configurations """
